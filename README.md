@@ -1,4 +1,4 @@
-### Eryn's blog
+### [Eryn's blog](https://eryn-mk.github.io)
 My personal blog for learning notes and daily trivia
 
 ---------------------
