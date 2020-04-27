@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "'Serialize' in Java"
-subtitle:   "理解Java中的序列化和反序列化“
+subtitle:   "理解Java中的序列化和反序列化"
 date:       2019-11-19
 author:     "Eryn"
 tags:

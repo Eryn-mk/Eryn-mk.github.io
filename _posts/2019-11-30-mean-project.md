@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "MEAN-stack Project"
-subtitle:   "MEAN全栈项目技术笔记“
+subtitle:   "MEAN全栈项目技术笔记"
 date:       2019-11-30
 author:     "Eryn"
 tags:

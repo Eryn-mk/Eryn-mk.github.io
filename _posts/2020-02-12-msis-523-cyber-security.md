@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Cyber Security - Information Security"
-subtitle:   "网络安全基础知识 - 信息安全“
+subtitle:   "网络安全基础知识 - 信息安全"
 date:       2020-02-12
 author:     "Eryn"
 tags:

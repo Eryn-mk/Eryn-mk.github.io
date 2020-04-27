@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Two-Pointers Problems"
-subtitle:   "双指针题型总结“
+subtitle:   "双指针题型总结"
 date:       2020-01-14
 author:     "Eryn"
 tags:

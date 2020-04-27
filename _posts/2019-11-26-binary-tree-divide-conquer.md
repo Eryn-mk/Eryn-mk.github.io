@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Bianry Tree and Divide & Conquer Problems"
-subtitle:   "二叉树，分治法和题目总结“
+subtitle:   "二叉树，分治法和题目总结"
 date:       2019-11-26
 author:     "Eryn"
 tags:

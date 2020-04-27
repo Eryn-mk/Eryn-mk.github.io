@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Back Tracking & DFS"
-subtitle:   "回溯法总结“
+subtitle:   "回溯法总结"
 date:       2020-01-05
 author:     "Eryn"
 tags:

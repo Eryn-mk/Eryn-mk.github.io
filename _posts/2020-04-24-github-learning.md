@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Learning Github"
-subtitle:   "GitHub 学习笔记“
+subtitle:   "GitHub 学习笔记"
 date:       2020-04-24
 author:     "Eryn"
 tags:

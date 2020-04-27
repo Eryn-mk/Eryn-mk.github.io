@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Binary Search Problems"
-subtitle:   "二分搜索法和题目总结“
+subtitle:   "二分搜索法和题目总结"
 date:       2019-11-23
 author:     "Eryn"
 tags:

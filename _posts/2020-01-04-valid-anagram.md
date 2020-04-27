@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Leetcode 242 Valid Anagram "
-subtitle:   "力扣242笔记：有效的字母异位词“
+subtitle:   "力扣242笔记：有效的字母异位词"
 date:       2020-01-04
 author:     "Eryn"
 tags:
