@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "'LinkedList' in Java"
-subtitle:   "理解Java中的链表“
+subtitle:   "理解Java中的链表"
 date:       2019-11-14
 author:     "Eryn"
 tags:

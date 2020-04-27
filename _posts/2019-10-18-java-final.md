@@ -1,13 +1,14 @@
 ---
 layout:     post
 title:      "'final'variable in Java"
-subtitle:   "理解Java中的final“
+subtitle:   "理解Java中的final"
 date:       2019-10-18
 author:     "iostream123"
 tags:
     - Java
     - Java Basics
 ---
+
 参考[!iostream123](https://blog.csdn.net/iostream123/article/details/5979635)
 
 ## final
