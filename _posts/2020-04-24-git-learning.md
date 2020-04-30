@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "Learning Github"
-subtitle:   "GitHub 学习笔记"
+title:      "Learning Git"
+subtitle:   "Git 学习笔记"
 date:       2020-04-24
 author:     "Eryn"
 tags:
@@ -11,6 +11,46 @@ tags:
 
 参考自[廖雪峰老师博客教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 和 [阮一峰老师网络日志](https://www.ruanyifeng.com/blog/2014/06/git_remote.html)   
+
+## 分支管理
+
+* 查看分支```git branch```
+* 创建分支```git branch <name>```
+* 切换分支```git checkout <name>```,```git switch <name>```
+* 创建+切换分支```git checkout -b <name>```, ```git switch -c <name>```
+* 合并某分支到当前分支```git merge <name>```
+* 删除分支```git branch -d <name>```
+
+### 分支合并和合并冲突
+* 有冲突的时候，手动打开file，看到git标注了不一样的地方，手动合并
+* 看分支合并图```git log --graph --pretty=oneline --abbrev-commit```
+
+### rebase
+* ```git rebase```
+* rebase可以把本地未push的分叉提交历史整理成直线
+* rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
+* 不要在合作分支上使用
+
+### fast foward和禁用
+* 通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
+* 如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
+* 因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。
+* 禁用fast foward，合并并生成commit```git merge --no-ff -m "merge with no-off" dev```
+
+## 标签管理
+### 创建标签
+* 切换到需要打标签的分支，```git tag v1.0```
+* 用```git tag <tagname>```新建标签，默认为HEAD，也可以指定一个commit id
+* 用```git tag v1.0 <commit id>```对某次提交打上标签
+* 用```git tag```查看所有标签
+* **标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。**
+
+### 删除和推送标签
+* 命令```git push origin <tagname>```可以推送一个本地标签；
+* 命令```git push origin --tags```可以推送全部未推送过的本地标签；
+* 命令```git tag -d <tagname>```可以删除一个本地标签；
+* 命令```git push origin :refs/tags/<tagname>```可以删除一个远程标签。
+
 
 ## 本地工作区操作
 ### 创建版本库
@@ -70,41 +110,3 @@ Git创建了仓库，告诉你是个空仓库，目录下多了```.git```的目�
 * 合并```git rebase origin/master```
 * ```git push origin master```将本地的master分支推送到origin主机的master分支。如果后者不存在，则会被新建
 * ```git push -u origin master```上面命令将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了。
-
-## 分支管理
-
-* 查看分支```git branch```
-* 创建分支```git branch <name>```
-* 切换分支```git checkout <name>```,```git switch <name>```
-* 创建+切换分支```git checkout -b <name>```, ```git switch -c <name>```
-* 合并某分支到当前分支```git merge <name>```
-* 删除分支```git branch -d <name>```
-
-### 分支合并和合并冲突
-* 有冲突的时候，手动打开file，看到git标注了不一样的地方，手动合并
-* 看分支合并图```git log --graph --pretty=oneline --abbrev-commit```
-
-### rebase
-* ```git rebase```
-* rebase可以把本地未push的分叉提交历史整理成直线
-* rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
-
-### fast foward和禁用
-* 通常，合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
-* 如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
-* 因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。
-* 禁用fast foward，合并并生成commit```git merge --no-ff -m "merge with no-off" dev```
-
-## 标签管理
-### 创建标签
-* 切换到需要打标签的分支，```git tag v1.0```
-* 用```git tag <tagname>```新建标签，默认为HEAD，也可以指定一个commit id
-* 用```git tag v1.0 <commit id>```对某次提交打上标签
-* 用```git tag```查看所有标签
-* **标签总是和某个commit挂钩。如果这个commit既出现在master分支，又出现在dev分支，那么在这两个分支上都可以看到这个标签。**
-
-### 删除和推送标签
-* 命令```git push origin <tagname>```可以推送一个本地标签；
-* 命令```git push origin --tags```可以推送全部未推送过的本地标签；
-* 命令```git tag -d <tagname>```可以删除一个本地标签；
-* 命令```git push origin :refs/tags/<tagname>```可以删除一个远程标签。
